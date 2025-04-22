@@ -11,10 +11,8 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 bot = TeleBot(TELEGRAM_TOKEN)
 openai.api_key = OPENAI_API_KEY
 
-# Включён ли режим логики
 logic_mode = {}
 
-# Команда для включения логического режима
 @bot.message_handler(commands=["logic_mode"])
 def enable_logic_mode(message):
     logic_mode[message.chat.id] = True
@@ -44,7 +42,6 @@ def handle_text(message):
                 {"role": "user", "content": message.text}
             ]
             if explain:
-                # Добавим системную инструкцию, чтобы GPT тоже объяснял логику
                 messages.insert(0, {
                     "role": "system",
                     "content": "Ты помощник, который всегда объясняет, почему дал такой ответ."
