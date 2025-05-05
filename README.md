@@ -1,2 +1,0 @@
-# Startup-House
-Telegram Bot
