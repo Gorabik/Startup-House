@@ -4,7 +4,7 @@ import os
 import openai
 
 load_dotenv("/.env")
-
+ 
 TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
