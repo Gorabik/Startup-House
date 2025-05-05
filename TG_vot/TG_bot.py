@@ -24,7 +24,7 @@ def handle_text(message):
     text = message.text.lower()
     explain = logic_mode.get(chat_id, False)
 
-    if "привет" in text:
+    if "привет" or "hello in text:
         response = "Добро пожаловать в Startup House! 🚀"
         if explain:
             response += "\n\n📌 Объяснение: найдено ключевое слово 'привет'."
